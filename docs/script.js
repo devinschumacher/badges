@@ -1,15 +1,11 @@
-// Wait for the DOM to be fully loaded
+// Ensure GSAP is loaded
 document.addEventListener("DOMContentLoaded", function() {
-    // Check if GSAP is loaded
     if (typeof gsap === 'undefined') {
-        console.error("GSAP library not loaded. Make sure to include the GSAP script in your HTML.");
+        console.error("GSAP library not loaded!");
         return;
     }
     
-    // Animation speed
     const speed = 4.5;
-    
-    // Create the timelines with infinite repeats
     const r = gsap.timeline({ repeat: -1 });
     const o = gsap.timeline({ repeat: -1 });
     const h = gsap.timeline({ repeat: -1 });
@@ -57,5 +53,5 @@ document.addEventListener("DOMContentLoaded", function() {
         ease: "sine.out"
     });
     
-    console.log("SERP Badge animations initialized!");
+    console.log("Animations initialized!");
 });
