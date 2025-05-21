@@ -1,8 +1,8 @@
 :root {
     --bg: #111316;
-    --logo: url(https://assets.codepen.io/13471/threads.svg);
-    --logopng: url(https://assets.codepen.io/13471/threads.png);
-    --ticket: url(https://assets.codepen.io/13471/ticket-shape.svg);
+    --logo: url(https://embeds.serp.co/serp-arrow.svg);
+    --logopng: url(https://embeds.serp.co/serp-arrow.svg);
+    --ticket: url(https://embeds.serp.co/serp-arrow.svg);
     --ar: 20/30;
     --gutter: 8%;
 }
