@@ -38,6 +38,7 @@ body {
     overflow: hidden;
     padding: 50px;
     z-index: 999;
+    padding: 0 50px 50px 50px;
 }
 
 .ticket {
@@ -199,7 +200,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    bottom: 2%;
+    bottom: 5%;
     left: 0;
     right: 0;
     height: 18%;
