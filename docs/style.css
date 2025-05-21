@@ -2,9 +2,24 @@
     --bg: #111316;
     --logo: url(https://embeds.serp.co/serp-arrow.svg);
     --logopng: url(https://embeds.serp.co/serp-arrow.svg);
-    --ticket: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L200,0 L200,300 L0,300 Z" fill="black"/></svg>');
+    --ticket: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L200,0 L200,270 C200,270 150,300 100,300 C50,300 0,270 0,270 Z" fill="black"/></svg>');
     --ar: 20/30;
     --gutter: 8%;
+}
+
+body {
+    background-color: var(--bg);
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #app {
@@ -12,8 +27,17 @@
     --o: 0;
     --p: 100%;
     --h: 50%;
-    --r: 0;
+    --r: 0deg;
     transform: translate3d(0, 0, 0.1px);
+    
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    display: grid;
+    grid: 1fr/1fr;
+    place-content: center;
+    overflow: hidden;
+    padding: 50px;
+    z-index: 999;
 }
 
 .ticket {
@@ -21,6 +45,11 @@
     transform: translate3d(0, 0, 0.1px) scale(var(--scale)) rotateY(var(--r));
     transform-style: preserve-3d;
     pointer-events: auto;
+    
+    display: grid;
+    grid-area: 1/1;
+    width: 400px;
+    aspect-ratio: var(--ar);
 }
 
 .front,
@@ -44,6 +73,7 @@
     mask-size: cover;
     mask-repeat: no-repeat;
 }
+
 .cutout {
     position: absolute;
 }
@@ -75,9 +105,7 @@
     position: absolute;
     inset: 0;
     border-radius: 15px;
-}
-
-.holo {
+    
     --space: 5%;
     --red: hsl(0, 100%, 50%);
     --orange: hsl(30, 100%, 50%);
@@ -153,6 +181,7 @@ p {
 [contenteditable] {
     outline: none;
 }
+
 [contenteditable]:focus {
     background: rgba(0,0,0,0.8);
     color: white;
@@ -197,7 +226,7 @@ p {
 .username {
     display: flex;
     align-items: center;
-    font-family: heebo;
+    font-family: heebo, sans-serif;
     font-weight: 600;
 }
 
@@ -214,6 +243,7 @@ p {
     width: 18px;
     margin-left: 5px;
 }
+
 .usernum {
     font-size: 20px;
 }
@@ -235,38 +265,27 @@ h1 {
     box-sizing: border-box;
 }
 
-body,
-html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#app {
-    color: black;
-    font-family: "Roboto Mono", monospace;
-
-    display: grid;
-    grid: 1fr/1fr;
-    place-content: center;
-    overflow: hidden;
-    padding: 50px;
-    z-index: 999;
-}
-
-.ticket {
-    display: grid;
-    grid-area: 1/1;
-    width: 400px;
-    aspect-ratio: var(--ar);
-}
-
 @media screen and (max-width: 400px) {
     .ticket {
         --scale: 0.75;
     }
+}
+
+.social-icon {
+    position: fixed;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.github {
+    right: 20px;
+}
+
+.twitter {
+    right: 60px;
+}
+
+.codepen {
+    right: 100px;
 }
