@@ -1,5 +1,5 @@
 :root {
-   --bg: transparent;
+    --bg: #111316;
     --logo: url(https://embeds.serp.co/serp-arrow.svg);
     --logopng: url(https://embeds.serp.co/serp-arrow.svg);
     --ticket: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L200,0 L200,270 C200,270 150,300 100,300 C50,300 0,270 0,270 Z" fill="black"/></svg>');
@@ -8,7 +8,7 @@
 }
 
 body {
-       background-color: transparent;
+    background-color: var(--bg);
     color: white;
     font-family: "Roboto Mono", monospace;
     display: flex;
@@ -29,7 +29,7 @@ body {
     --h: 50%;
     --r: 0deg;
     transform: translate3d(0, 0, 0.1px);
-    min-height: 600px;
+    
     color: black;
     font-family: "Roboto Mono", monospace;
     display: grid;
@@ -38,7 +38,6 @@ body {
     overflow: hidden;
     padding: 50px;
     z-index: 999;
-    padding: 30px 50px 80px 50px;
 }
 
 .ticket {
@@ -51,7 +50,6 @@ body {
     grid-area: 1/1;
     width: 400px;
     aspect-ratio: var(--ar);
-    margin-bottom: 40px; 
 }
 
 .front,
@@ -201,7 +199,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    bottom: 5%;
+    bottom: 2%;
     left: 0;
     right: 0;
     height: 18%;
