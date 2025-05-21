@@ -1,5 +1,5 @@
 :root {
-    --bg: #111316;
+   --bg: transparent;
     --logo: url(https://embeds.serp.co/serp-arrow.svg);
     --logopng: url(https://embeds.serp.co/serp-arrow.svg);
     --ticket: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L200,0 L200,270 C200,270 150,300 100,300 C50,300 0,270 0,270 Z" fill="black"/></svg>');
