@@ -7,37 +7,13 @@
     --gutter: 8%;
 }
 
-body {
-    background-color: var(--bg);
-    color: white;
-    font-family: "Roboto Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 #app {
     perspective: 1200px;
     --o: 0;
     --p: 100%;
     --h: 50%;
-    --r: 0deg;
+    --r: 0;
     transform: translate3d(0, 0, 0.1px);
-    
-    color: black;
-    font-family: "Roboto Mono", monospace;
-    display: grid;
-    grid: 1fr/1fr;
-    place-content: center;
-    overflow: hidden;
-    padding: 50px;
-    z-index: 999;
 }
 
 .ticket {
@@ -45,11 +21,6 @@ body {
     transform: translate3d(0, 0, 0.1px) scale(var(--scale)) rotateY(var(--r));
     transform-style: preserve-3d;
     pointer-events: auto;
-    
-    display: grid;
-    grid-area: 1/1;
-    width: 400px;
-    aspect-ratio: var(--ar);
 }
 
 .front,
@@ -73,7 +44,6 @@ body {
     mask-size: cover;
     mask-repeat: no-repeat;
 }
-
 .cutout {
     position: absolute;
 }
@@ -105,7 +75,9 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 15px;
-    
+}
+
+.holo {
     --space: 5%;
     --red: hsl(0, 100%, 50%);
     --orange: hsl(30, 100%, 50%);
@@ -181,7 +153,6 @@ p {
 [contenteditable] {
     outline: none;
 }
-
 [contenteditable]:focus {
     background: rgba(0,0,0,0.8);
     color: white;
@@ -226,7 +197,7 @@ p {
 .username {
     display: flex;
     align-items: center;
-    font-family: heebo, sans-serif;
+    font-family: heebo;
     font-weight: 600;
 }
 
@@ -243,7 +214,6 @@ p {
     width: 18px;
     margin-left: 5px;
 }
-
 .usernum {
     font-size: 20px;
 }
@@ -265,27 +235,38 @@ h1 {
     box-sizing: border-box;
 }
 
+body,
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    color: black;
+    font-family: "Roboto Mono", monospace;
+
+    display: grid;
+    grid: 1fr/1fr;
+    place-content: center;
+    overflow: hidden;
+    padding: 50px;
+    z-index: 999;
+}
+
+.ticket {
+    display: grid;
+    grid-area: 1/1;
+    width: 400px;
+    aspect-ratio: var(--ar);
+}
+
 @media screen and (max-width: 400px) {
     .ticket {
         --scale: 0.75;
     }
-}
-
-.social-icon {
-    position: fixed;
-    bottom: 20px;
-    width: 30px;
-    height: 30px;
-}
-
-.github {
-    right: 20px;
-}
-
-.twitter {
-    right: 60px;
-}
-
-.codepen {
-    right: 100px;
 }
