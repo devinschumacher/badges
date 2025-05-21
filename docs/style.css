@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: var(--bg);
+       background-color: transparent;
     color: white;
     font-family: "Roboto Mono", monospace;
     display: flex;
@@ -29,7 +29,7 @@ body {
     --h: 50%;
     --r: 0deg;
     transform: translate3d(0, 0, 0.1px);
-    
+    min-height: 600px;
     color: black;
     font-family: "Roboto Mono", monospace;
     display: grid;
@@ -38,7 +38,7 @@ body {
     overflow: hidden;
     padding: 50px;
     z-index: 999;
-    padding: 0 50px 50px 50px;
+    padding: 30px 50px 80px 50px;
 }
 
 .ticket {
@@ -51,6 +51,7 @@ body {
     grid-area: 1/1;
     width: 400px;
     aspect-ratio: var(--ar);
+    margin-bottom: 40px; 
 }
 
 .front,
